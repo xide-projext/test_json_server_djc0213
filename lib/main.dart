@@ -7,6 +7,7 @@ void main() async {
   var toons = [];
   try {
     var response = await get(Uri.http("localhost:3000", jsonUrl));
+    print(response.body);
     toons = json.decode(response.body);
   } catch (e) {
     print(e);
